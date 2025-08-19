@@ -53,10 +53,19 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "header_test_ziaw76": {
+      "type": "header-test",
+      "name": "header test",
+      "settings": {
+        "heading_text": "fakestore",
+        "menu": "main-menu"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "header_test_ziaw76"
   ]
 }
