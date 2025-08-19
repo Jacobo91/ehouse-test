@@ -34,6 +34,21 @@
     },
     "cards_test_Hy3FaX": {
       "type": "cards-test",
+      "blocks": {
+        "card_GMxXRd": {
+          "type": "card",
+          "settings": {
+            "mobile_image": "shopify://shop_images/card_1_mobile.png",
+            "desktop_image": "shopify://shop_images/card_1_desktop.png",
+            "title": "new arrivals",
+            "subtitle": "Our latest Summer styles. Fresh. Fun. Fabulous",
+            "menu": "banner-menu"
+          }
+        }
+      },
+      "block_order": [
+        "card_GMxXRd"
+      ],
       "name": "two cards test",
       "settings": {}
     }
