@@ -14,7 +14,7 @@
     - use clamp for responsive font-size
     - create a button snippet that can be reused latter in other sections
     - add page-width class to avoid over stretch
-
+    - create separated files dor each section css
 
 
 
