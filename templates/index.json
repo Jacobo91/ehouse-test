@@ -29,7 +29,7 @@
         "title": "Vacay This Way",
         "discount": "<p>Everything you need for your summer get away!</p>",
         "banner_menu": "summer-essentials",
-        "type": "banner"
+        "type": "regular"
       }
     }
   },
