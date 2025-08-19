@@ -3,20 +3,33 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 18px 27px;
     }
     .header__heading {
     
+    }
+    .header__heading-link,
+    .header__inline-menu,
+    .header__inline-menu .list-menu {
+        margin: 0;
+        padding: 0;
     }
     .header__inline-menu .list-menu {
         display: flex;
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
+        list-style: none;
+        gap: 12px;
     }
     .header__inline-menu .list-menu a {
         color: black;
         text-decoration: none;
-        padding: 12px;
+    }
+    @media screen and (min-width: 1440px) {
+        .header {
+            padding: 42px 52px;
+        }
     }
 </style>
 
