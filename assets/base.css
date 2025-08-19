@@ -1291,11 +1291,20 @@ deferred-media {
 }
 
 .announcement-bar__message {
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
-  min-height: 3.8rem;
+  font-size: 11px;
+  height: 35px;
+}
+
+@media screen and (min-width: 980px) {
+  .announcement-bar__message {
+    font-size: 14px;
+    height: 50px;
+  }
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
