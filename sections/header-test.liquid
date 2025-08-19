@@ -5,8 +5,16 @@
         justify-content: space-between;
         padding: 18px 27px;
     }
-    .header__heading {
-    
+    .heading__image {
+        width: 119px;
+        display: flex;
+    }
+    .heading__image a {
+        display: flex;
+    }
+    .heading__image img {
+        width: 100%;
+        object-fit: cover;
     }
     .header__heading-link,
     .header__inline-menu,
@@ -14,13 +22,18 @@
         margin: 0;
         padding: 0;
     }
+    .header__inline-menu {
+        display: none;
+        height: -webkit-fill-available;
+    }
     .header__inline-menu .list-menu {
         display: flex;
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
         list-style: none;
-        gap: 12px;
+        gap: 20px;
+        height: -webkit-fill-available;
     }
     .header__inline-menu .list-menu a {
         color: black;
@@ -29,18 +42,82 @@
     .header__inline-menu .list-menu .menu-link.sale a {
         color: {{ section.settings.sale_color }};
     }
+    .account {
+        text-decoration: none;
+    }
+    .account span {
+        line-height: normal;
+    }
+    .account span p {
+        margin: 0;
+        font-weight: 300;
+        color: #4A4A4A;
+        text-align: center;
+    }
+    .account span p:nth-of-type(1) {
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .account span p:nth-of-type(2) {
+        text-decoration: underline;
+        font-size: 12px;
+    }
+    .header__icons {
+        display: flex;
+        align-items: end;
+        gap: 41px;
+    }
+    .header__search,
+    .account {
+        display: none;
+    }
+    .menu-icon-svg {
+        display: flex;
+    }
+    @media screen and (min-width: 980px) {
+        .header {
+            padding: 42px 52px;
+        }
+        .heading__image {
+            width: 169px;
+        }
+        .header__inline-menu {
+            display: block;
+        }
+        .header__inline-menu .list-menu {
+            align-items: end;
+            gap: 10px;
+        }
+        .header__search,
+        .account {
+            display: block;
+        }
+        .menu-icon-svg {
+            display: none;
+        }
+    }
     @media screen and (min-width: 1440px) {
         .header {
             padding: 42px 52px;
+        }
+        .heading__image {
+            width: 229px;
+        }
+        .header__inline-menu .list-menu {
+            align-items: end;
+            gap: 48px;
         }
     }
 </style>
 
 <header class="header">
+    <span class="menu-icon-svg">
+        {% render 'menu-icon' %}
+    </span>
     {% case section.settings.heading_logo %}
         {% when 'text' %}            
             <h1 class="header__heading">
-                <a class="header__heading-link">                
+                <a href="{{ routes.root_url }}" class="header__heading-link">                
                     <span class="h2">
                         {{ section.settings.heading_text }}
                     </span>  
@@ -48,7 +125,9 @@
             </h1>
         {% else %}
             <div class="heading__image">
-                <img src="{{ section.settings.heading_image | image_url: width: 400 }}" alt="header logo">
+                <a href="{{ routes.root_url }}">
+                    <img src="{{ section.settings.heading_image | image_url: width: 400 }}" alt="header logo">
+                </a>
             </div>
     {% endcase %}
     <nav class="header__inline-menu">
@@ -82,36 +161,19 @@
         {% render 'header-search', input_id: 'Search-In-Modal' %}
         {%- if shop.customer_accounts_enabled -%}
             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+                class="account"
                 rel="nofollow"
             >
-                {%- if section.settings.enable_customer_avatar -%}
-                    <account-icon>
-                    {%- if customer and customer.has_avatar? -%}
-                        {{ customer | avatar }}
-                    {%- else -%}
-                        <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-                    {%- endif -%}
-                    </account-icon>
-                {%- else -%}
-                    <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-                {%- endif -%}
-                <span class="visually-hidden">
-                    {%- liquid
-                    if customer
-                        echo 'customer.account_fallback' | t
-                    else
-                        echo 'customer.log_in' | t
-                    endif
-                    -%}
+                <span class="">
+                    {{ section.settings.account }}
                 </span>
             </a>
          {%- endif -%}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             {% if cart == empty %}
-            <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper cart">{{ 'test.svg' | inline_asset_content }}</span>
             {% else %}
-            <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper cart">{{ 'test.svg' | inline_asset_content }}</span>
             {% endif %}
             <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
             {%- if cart != empty -%}
@@ -172,7 +234,13 @@
             "label": "sale color",
             "default": "#FF2500",
             "info": "use to set sale link color"
-        }
+        },
+        {
+            "type": "richtext",
+            "id": "account",
+            "label": "account link text",
+            "default": "<p>My Account</p><p>Sign in or Sign up</p>"
+        },
     ],
     "blocks": [
       {
