@@ -5,11 +5,18 @@
   text-transform: uppercase;
   color: #141414;
 }
+.banner__wrapper.regular {
+  max-width: 1388px;
+  margin: 0 auto;
+}
 .banner__image {
   width: 100%;
   object-fit: cover;
   grid-column: 1;
   grid-row: 1;
+}
+picture {
+  display: flex;
 }
 .banner__image img {
   width: 100%;
@@ -27,7 +34,7 @@
   margin-top: 68%;
 }
 .banner__content.regular {
-  padding: 45px;
+  padding: 35px;
   margin-top: 60%;
 }
 .banner__title {
@@ -69,6 +76,9 @@
 .banner-menu-link {
   flex: 1 1 calc(50% - 16px);
   padding-block: 6px;
+}
+.banner-menu-link.regular {
+  max-width: 287px;
 }
 .banner-menu-link a {
   font-size: 12px;
@@ -133,6 +143,6 @@
     margin: 0 0 31px 0;
   }
   .banner__content.regular {
-    padding: 97px 115px 103px 113px;
+    padding: 97px 141px 103px 113px;
   }
 }

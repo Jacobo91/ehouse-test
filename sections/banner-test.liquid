@@ -38,7 +38,11 @@
       <div class="banner__links {{ section.settings.type }}">
         <ul class="banner-menu {{ section.settings.type }}">
           {% for link in section.settings.banner_menu.links %}
-            {% render 'button-test', url: link.url, title: link.title  %}
+            {% render 'button-test', 
+                url: link.url, 
+                title: link.title,
+                class: section.settings.type  
+            %}
           {% endfor %}
         </ul>
       </div>
