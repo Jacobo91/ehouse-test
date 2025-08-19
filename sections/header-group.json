@@ -59,8 +59,11 @@
       "type": "header-test",
       "name": "header test",
       "settings": {
+        "heading_logo": "text",
         "heading_text": "fakestore",
-        "menu": "ehouse"
+        "heading_image": "shopify://shop_images/fakestore-logo.png",
+        "menu": "ehouse",
+        "sale_color": "#ff2500"
       }
     }
   },
