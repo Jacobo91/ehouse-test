@@ -16,11 +16,25 @@
         "desktop_image": "shopify://shop_images/hero_image_9df15f68-7a71-4c09-a5ff-2d4db5309b90.png",
         "title": "in stores & online",
         "discount": "<p>50% off</p><p>everything</p>",
-        "banner_menu": "banner-menu"
+        "banner_menu": "banner-menu",
+        "type": "banner"
+      }
+    },
+    "banner_test_m4pP3J": {
+      "type": "banner-test",
+      "name": "banner test",
+      "settings": {
+        "mobile_image": "shopify://shop_images/vacay_mobile.png",
+        "desktop_image": "shopify://shop_images/vacay_desktop.png",
+        "title": "Vacay This Way",
+        "discount": "<p>Everything you need for your summer get away!</p>",
+        "banner_menu": "",
+        "type": "banner"
       }
     }
   },
   "order": [
-    "banner-test"
+    "banner-test",
+    "banner_test_m4pP3J"
   ]
 }
