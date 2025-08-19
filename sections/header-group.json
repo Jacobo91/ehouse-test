@@ -46,22 +46,10 @@
         "sale_color": "#ff2500",
         "account": "<p>My Account</p><p>Sign in or Sign up</p>"
       }
-    },
-    "banner_test_yUPwGT": {
-      "type": "banner-test",
-      "name": "banner test",
-      "settings": {
-        "mobile_image": "shopify://shop_images/hero_image_desktop.png",
-        "desktop_image": "shopify://shop_images/hero_image_9df15f68-7a71-4c09-a5ff-2d4db5309b90.png",
-        "title": "in stores & online",
-        "discount": "<p>50% off</p><p>everything</p>",
-        "banner_menu": "banner-menu"
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header_test_ziaw76",
-    "banner_test_yUPwGT"
+    "header_test_ziaw76"
   ]
 }
