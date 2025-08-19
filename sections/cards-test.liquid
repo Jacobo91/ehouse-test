@@ -1,0 +1,94 @@
+<section id="{{ section.id }}" class="page-width">
+  <div class="cards-wrapper">
+    {% for block in section.blocks %}        
+        <div class="card card-{{ forloop.index }}">
+          <div class="card__image-wrapper">
+            <picture>
+              <!-- Mobile -->
+              <source
+                media="(max-width: 600px)"
+                srcset="
+                  {{ section.settings.mobile_image | image_url: width: 400 }} 400w,
+                  {{ section.settings.mobile_image | image_url: width: 800 }} 800w,
+                  {{ section.settings.mobile_image | image_url: width: 1200 }} 1200w
+                "
+                sizes="100vw"
+              >
+    
+              <!-- Desktop -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  {{ section.settings.desktop_image | image_url: width: 800 }} 800w,
+                  {{ section.settings.desktop_image | image_url: width: 1600 }} 1600w,
+                  {{ section.settings.desktop_image | image_url: width: 2400 }} 2400w,
+                  {{ section.settings.desktop_image | image_url: width: 3840 }} 3840w
+                "
+                sizes="100vw"
+              >
+    
+              <img
+                src="{{ section.settings.desktop_image | image_url: width: 1600 }}"
+                alt="card"
+                class="card__img"
+              >
+            </picture>
+          </div>
+          <div class="card__info">
+            <div class="card__info-title">
+                <h2>{{ block.settings.title }}</h2>
+            </div>
+            <div class="card__info-subtitle">
+                <h2>{{ block.settings.subtitle }}</h2>
+            </div>
+            <div class="card__info-links">
+                <ul class="card__menu">
+                    {% for link in block.settings.menu.links %}
+                        <li class="card__menu-link">
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "two cards test",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "card",
+        "name": "card",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "card title",
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "card subtitle"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "card links",
+            "info": "use to set links in card"
+          },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "two cards test"
+      }
+    ]
+  }
+{% endschema %}
