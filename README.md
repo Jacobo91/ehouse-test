@@ -15,6 +15,7 @@
     - create a button snippet that can be reused latter in other sections
     - add page-width class to avoid over stretch
     - create separated files dor each section css
+    - reuse banner section using schema selector and unique class to create the vacay this way section and avoid code repetition
 
 
 
