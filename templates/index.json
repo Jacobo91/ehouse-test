@@ -9,8 +9,13 @@
  */
 {
   "sections": {
+    "banner-test": {
+      "type": "banner-test",
+      "settings": {
+      }
+    }
   },
   "order": [
-   
+    "banner-test"
   ]
 }
