@@ -26,6 +26,9 @@
         color: black;
         text-decoration: none;
     }
+    .header__inline-menu .list-menu .menu-link.sale a {
+        color: {{ section.settings.sale_color }};
+    }
     @media screen and (min-width: 1440px) {
         .header {
             padding: 42px 52px;
@@ -44,17 +47,17 @@
     <nav class="header__inline-menu">
         <ul class="list-menu">
             {% for link in section.settings.menu.links %}
-                <li class="menu-link">
+                <li class="menu-link {{ link.title }}">
                     <a href="{{ link.url }}">{{ link.title }}</a>
                     {% if link.links.size > 0 %}
                         <ul class="menu dropdown-child">
                             {% for child_link in link.links %}
-                                <li class="menu-link">
+                                <li class="menu-link {{ link.title }}">
                                     <a href="{{ child_link.url }}">{{ child_link.title }}</a>
                                     {% if child_link.links.size > 0 %}
                                         <ul class="menu dropdown-grandchild">
                                             {% for grandchild_link in child_link.links %}
-                                                <li class="menu-link">
+                                                <li class="menu-link {{ link.title }}">
                                                     <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
                                                 </li>
                                             {% endfor %}
@@ -133,6 +136,13 @@
             "id": "menu",
             "label": "Menu",
             "default": "main-menu"
+        },
+        {
+            "type": "color",
+            "id": "sale_color",
+            "label": "sale color",
+            "default": "#FF2500",
+            "info": "use to set sale link color"
         },
     ],
     "blocks": [
