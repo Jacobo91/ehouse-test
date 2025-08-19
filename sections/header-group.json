@@ -51,6 +51,8 @@
       "type": "banner-test",
       "name": "banner test",
       "settings": {
+        "mobile_image": "shopify://shop_images/hero_image_desktop.png",
+        "desktop_image": "shopify://shop_images/hero_image.png",
         "title": "in stores & online",
         "discoubt": "<p>50% off</p><p>everything</p>",
         "banner_menu": ""
