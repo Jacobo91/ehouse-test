@@ -28,7 +28,7 @@
         "desktop_image": "shopify://shop_images/vacay_desktop.png",
         "title": "Vacay This Way",
         "discount": "<p>Everything you need for your summer get away!</p>",
-        "banner_menu": "",
+        "banner_menu": "summer-essentials",
         "type": "banner"
       }
     }
