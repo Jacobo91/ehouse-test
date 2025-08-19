@@ -55,7 +55,7 @@
         "desktop_image": "shopify://shop_images/hero_image.png",
         "title": "in stores & online",
         "discoubt": "<p>50% off</p><p>everything</p>",
-        "banner_menu": ""
+        "banner_menu": "banner-menu"
       }
     }
   },
