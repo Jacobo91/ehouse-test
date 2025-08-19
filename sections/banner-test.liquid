@@ -1,0 +1,80 @@
+<section class="banner" id="{{ section.id }}">
+  <div class="banner__wrapper">
+    <div class="banner__image">
+      <picture>
+        <source media="(max-width: 767px)" srcset="{{ section.settings.mobile_image | img_url: '750x' }}">
+        <source media="(min-width: 768px)" srcset="{{ section.settings.desktop_image | img_url: '1500x' }}">
+        <img src="{{ section.settings.desktop_image | img_url: '1500x' }}" alt="Banner" class="banner__img">
+      </picture>
+    </div>
+    
+    <div class="banner__content">
+      <h2 class="banner__title">{{ section.settings.title }}</h2>
+      <p class="banner__discount">{{ section.settings.discount }}</p>
+      <div class="banner__links">
+        <ul class="banner-menu">
+            {% for link in section.settings.banner_menu.links %}
+                <li class="banner-menu-link">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "type name here",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "mobile image"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "desktop image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "banner title",
+            "default": "in stores & online",
+            "info": "use to set a banner title"
+        },
+        {
+            "type": "richtext",
+            "id": "discoubt",
+            "label": "use to set a discountt title",
+            "default": "<p>50% off</p><p>everything</p>",
+            "info": "use to set a discount title"
+        },
+        {
+            "type": "link_list",
+            "id": "banner_menu",
+            "label": "use to set links for the banner",
+        },
+    ],
+    "blocks": [
+      {
+        "type": "block_type",
+        "name": "Block name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_setting_id",
+            "label": "Block Setting Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "type name here"
+      }
+    ]
+  }
+{% endschema %}
