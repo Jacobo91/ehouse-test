@@ -110,6 +110,9 @@ picture {
     width: 53%;
     padding: 0;
   }
+  .banner__content.regular {
+    padding: 55px 85px;
+  }
   .banner-menu-link {
     list-style: none;
     background: #141414;
