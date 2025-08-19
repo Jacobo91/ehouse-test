@@ -132,4 +132,7 @@
     line-height: 26px;
     margin: 0 0 31px 0;
   }
+  .banner__content.regular {
+    padding: 97px 115px 103px 113px;
+  }
 }
