@@ -31,10 +31,16 @@
         "banner_menu": "summer-essentials",
         "type": "regular"
       }
+    },
+    "cards_test_Hy3FaX": {
+      "type": "cards-test",
+      "name": "two cards test",
+      "settings": {}
     }
   },
   "order": [
     "banner-test",
-    "banner_test_m4pP3J"
+    "banner_test_m4pP3J",
+    "cards_test_Hy3FaX"
   ]
 }
