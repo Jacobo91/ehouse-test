@@ -59,7 +59,7 @@
       "type": "header-test",
       "name": "header test",
       "settings": {
-        "heading_logo": "text",
+        "heading_logo": "image",
         "heading_text": "fakestore",
         "heading_image": "shopify://shop_images/fakestore-logo.png",
         "menu": "ehouse",
