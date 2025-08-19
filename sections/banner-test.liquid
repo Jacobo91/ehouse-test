@@ -1,8 +1,8 @@
 {{ 'banner-test.css' | asset_url | stylesheet_tag }}
 
 <section class="banner page-width" id="{{ section.id }}">
-  <div class="banner__wrapper">
-    <div class="banner__image">
+  <div class="banner__wrapper {{ section.settings.type }}">
+    <div class="banner__image {{ section.settings.type }}">
       <picture>
         <!-- Mobile -->
         <source 
@@ -32,11 +32,11 @@
       </picture>
     </div>
     
-    <div class="banner__content">
-      <h2 class="banner__title">{{ section.settings.title }}</h2>
-      <div class="banner__discount">{{ section.settings.discount }}</div>
-      <div class="banner__links">
-        <ul class="banner-menu">
+    <div class="banner__content {{ section.settings.type }}">
+      <h2 class="banner__title {{ section.settings.type }}">{{ section.settings.title }}</h2>
+      <div class="banner__discount {{ section.settings.type }}">{{ section.settings.discount }}</div>
+      <div class="banner__links {{ section.settings.type }}">
+        <ul class="banner-menu {{ section.settings.type }}">
           {% for link in section.settings.banner_menu.links %}
             {% render 'button-test', url: link.url, title: link.title  %}
           {% endfor %}
