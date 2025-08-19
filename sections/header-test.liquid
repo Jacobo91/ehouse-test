@@ -37,13 +37,20 @@
 </style>
 
 <header class="header">
-    <h1 class="header__heading">
-        <a class="header__heading-link">                
-            <span class="h2">
-                {{ section.settings.heading_text }}
-            </span>  
-        </a>
-    </h1>
+    {% case section.settings.heading_logo %}
+        {% when 'text' %}            
+            <h1 class="header__heading">
+                <a class="header__heading-link">                
+                    <span class="h2">
+                        {{ section.settings.heading_text }}
+                    </span>  
+                </a>
+            </h1>
+        {% else %}
+            <div class="heading__image">
+                <img src="{{ section.settings.heading_image | image_url: width: 400 }}" alt="header logo">
+            </div>
+    {% endcase %}
     <nav class="header__inline-menu">
         <ul class="list-menu">
             {% for link in section.settings.menu.links %}
@@ -124,12 +131,34 @@
     "name": "header test",
     "settings": [
         {
+            "type": "select",
+            "id": "heading_logo",
+            "label": "select heading logo type",
+            "options": [
+                {
+                    "value": "text",
+                    "label": "text"
+                },
+                {
+                    "value": "image",
+                    "label": "image"
+                }
+            ],
+            "default": "text",
+            "info": "use to pick between text or image logo"
+        },
+        {
             "type": "text",
             "id": "heading_text",
             "label": "header logo text",
             "default": "fakestore",
             "info": "use to display a logo text",
             "placeholder": "fakestore"
+        },
+        {
+            "type": "image_picker",
+            "id": "heading_image",
+            "label": "logo image"
         },
         {
             "type": "link_list",
