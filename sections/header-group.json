@@ -43,12 +43,23 @@
         "heading_text": "fakestore",
         "heading_image": "shopify://shop_images/fakestore-logo.png",
         "menu": "ehouse",
-        "sale_color": "#ff2500"
+        "sale_color": "#ff2500",
+        "account": "<p>My Account</p><p>Sign in or Sign up</p>"
+      }
+    },
+    "banner_test_yUPwGT": {
+      "type": "banner-test",
+      "name": "banner test",
+      "settings": {
+        "title": "in stores & online",
+        "discoubt": "<p>50% off</p><p>everything</p>",
+        "banner_menu": ""
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header_test_ziaw76"
+    "header_test_ziaw76",
+    "banner_test_yUPwGT"
   ]
 }
