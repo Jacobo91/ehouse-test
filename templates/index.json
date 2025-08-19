@@ -44,10 +44,21 @@
             "subtitle": "Our latest Summer styles. Fresh. Fun. Fabulous",
             "menu": "banner-menu"
           }
+        },
+        "card_d3zpVK": {
+          "type": "card",
+          "settings": {
+            "mobile_image": "shopify://shop_images/card_2_mobile.png",
+            "desktop_image": "shopify://shop_images/card_2_desktop.png",
+            "title": "college bound",
+            "subtitle": "New places and new faces. Same great style.",
+            "menu": ""
+          }
         }
       },
       "block_order": [
-        "card_GMxXRd"
+        "card_GMxXRd",
+        "card_d3zpVK"
       ],
       "name": "two cards test",
       "settings": {}
