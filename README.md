@@ -23,3 +23,7 @@
 ## What would you discuss with a designer through the process?
 
     - banenr images pixelating from the root figma file, provide better images please.
+
+## What was challenging / what wasn’t?
+
+    - To be honest, I didn’t find anything overchallenging. The only part that required a bit more thought was making sure the code stayed clean and reusable — for example, setting up sections in a way that they could be reused and display differently without repeating code. That took some consideration.
