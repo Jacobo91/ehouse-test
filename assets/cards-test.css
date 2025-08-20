@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   font-family: var(--font-heading-family);
   text-align: center;
@@ -91,12 +91,13 @@
     flex-direction: row;
   }
 }
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1340px) {
   .cards-wrapper {
     gap: 36px;
-    justify-content: flex-start;
+    justify-content: center;
   }
+}
+@media screen and (min-width: 1440px) {
   .card__info {
     position: absolute;
     bottom: 0;

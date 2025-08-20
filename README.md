@@ -17,7 +17,7 @@
     - create separated files dor each section css
     - reuse banner section using schema selector and unique class to create the vacay this way section and avoid code repetition
     - add checks to reinforce 2 blocks creation
-
+    - modified two cards align to center, the original one align to left looka weird and brakes the page harmony
 
 
 ## What would you discuss with a designer through the process?
