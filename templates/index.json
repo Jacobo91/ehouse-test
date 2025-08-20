@@ -42,7 +42,8 @@
             "desktop_image": "shopify://shop_images/card_1_desktop.png",
             "title": "new arrivals",
             "subtitle": "Our latest Summer styles. Fresh. Fun. Fabulous",
-            "menu": "banner-menu"
+            "menu": "banner-menu",
+            "narrow": false
           }
         },
         "card_d3zpVK": {
@@ -52,7 +53,8 @@
             "desktop_image": "shopify://shop_images/card_2_desktop.png",
             "title": "college bound",
             "subtitle": "New places and new faces. Same great style.",
-            "menu": "shop-dorm-decor"
+            "menu": "shop-dorm-decor",
+            "narrow": true
           }
         }
       },
