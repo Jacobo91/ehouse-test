@@ -8,7 +8,7 @@
 
 
 
-## code decisions:
+## code and genral decisions:
 
     - use section.settings.menu.links to let the merchant set its own menu in the editor created in the navigation inside the admin (all links are  redirecting to all collections, but are easily set from the admin => navigation)
     - use clamp for responsive font-size
