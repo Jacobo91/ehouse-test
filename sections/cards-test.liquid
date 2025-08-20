@@ -1,3 +1,91 @@
+<style>
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-family: var(--font-heading-family);
+        text-align: center;
+    }
+    .card {
+        width: 320px;
+        position: relative;
+    }
+    .card__image-wrapper {
+        width: 100%;
+    }
+    .card__image-wrapper img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .card__info-title h2 {
+        font-size: clamp(20px, 2vw, 28px);
+        letter-spacing: clamp(2.14px, 0.3vw, 3px);
+        text-transform: uppercase;
+        margin-block: 28px 15px;
+        font-weight: 500;
+    }
+    .card__info-subtitle h2 {
+        font-size: clamp(14px, 2vw, 16px);
+        letter-spacing: clamp(0.88px, 0.2vw, 1px);
+        margin-block: 0 13px;
+        font-weight: 300;
+    }
+    .card__menu {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: var(--font-heading-family);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .card__menu-link {
+        display: flex;
+        align-items: center;
+    }
+
+    .card__menu-link a {
+        color: #000;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-underline-offset: 2px;
+    }
+
+    /* Add separators */
+    .card__menu-link:not(:last-child)::after {
+        content: "|";
+        margin-left: 16px;
+        color: #000;
+        font-weight: normal;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .cards-wrapper {
+            gap: 36px;
+        }
+        .card {
+            width: 650px;
+        }
+        .card__info {
+            position: absolute;
+            bottom: 0;
+            background: #FFFFFF;
+            width: 100%;
+        }
+        .card__info-title h2 {
+            margin-block: 46px 23px;
+        }
+        .card__info-subtitle h2 {
+            margin-block: 0 18px;
+        }
+    }
+</style>
+
 <section id="{{ section.id }}" class="page-width">
   <div class="cards-wrapper">
     {% for block in section.blocks %}
