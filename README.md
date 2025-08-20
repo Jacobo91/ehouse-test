@@ -16,6 +16,7 @@
     - add page-width class to avoid over stretch
     - create separated files dor each section css
     - reuse banner section using schema selector and unique class to create the vacay this way section and avoid code repetition
+    - add checks to reinforce 2 blocks creation
 
 
 
