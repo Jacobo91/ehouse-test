@@ -4,10 +4,11 @@
   font-family: var(--font-heading-family);
   text-transform: uppercase;
   color: #141414;
+  margin-bottom: 118px;
 }
 .banner__wrapper.regular {
   max-width: 1388px;
-  margin: 0 auto;
+  margin: 0 auto 32px auto;
 }
 .banner__image {
   width: 100%;
@@ -87,6 +88,10 @@ picture {
   .banner__wrapper {
     grid-template-rows: none;
     align-items: center;
+    margin-bottom: 55px;
+  }
+  .banner__wrapper.regular {
+    margin: 0 auto 72px auto;
   }
   .banner__content {
     margin-inline: 10px;
