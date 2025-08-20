@@ -72,10 +72,18 @@
             "image": "shopify://shop_images/shipping-icon.png",
             "text": "FREE SHIPPING ON ALL ORDERS"
           }
+        },
+        "block_type_aagKR8": {
+          "type": "block_type",
+          "settings": {
+            "image": "shopify://shop_images/returns-icon.png",
+            "text": "FREE RETURNSON ALL ORDERS"
+          }
         }
       },
       "block_order": [
-        "block_type_fHqqET"
+        "block_type_fHqqET",
+        "block_type_aagKR8"
       ],
       "name": "value props test",
       "settings": {}
