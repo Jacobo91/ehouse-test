@@ -30,4 +30,4 @@
 
 ## test files
 
-    - All text files have the suffix -test
+    - All test files have the suffix -test
