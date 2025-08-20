@@ -2,13 +2,16 @@
     .cards-wrapper {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         gap: 20px;
         font-family: var(--font-heading-family);
         text-align: center;
+        width: 320px;
+        margin: 0 auto;
     }
     .card {
-        width: 320px;
+        width: auto;
         position: relative;
     }
     .card__image-wrapper {
@@ -18,12 +21,24 @@
         width: 100%;
         object-fit: cover;
     }
+    .card__info-title h2,
+    .card__info-subtitle h2 {
+        margin: 0;
+    }
+    .card-1,
+    .card-2 {
+        flex-basis: calc(50% - 20px);
+        max-width: 650px;
+    }
     .card__info-title h2 {
         font-size: clamp(20px, 2vw, 28px);
         letter-spacing: clamp(2.14px, 0.3vw, 3px);
         text-transform: uppercase;
-        margin-block: 28px 15px;
+        padding-block: 28px 15px;
         font-weight: 500;
+    }
+    .card__info-subtitle {
+        padding-inline: 50px;
     }
     .card__info-subtitle h2 {
         font-size: clamp(14px, 2vw, 16px);
@@ -47,6 +62,7 @@
     .card__menu-link {
         display: flex;
         align-items: center;
+        padding-block: 8px;
     }
 
     .card__menu-link a {
@@ -64,22 +80,30 @@
         font-weight: normal;
     }
 
+    @media screen and (min-width: 640px) {
+        .cards-wrapper {
+            width: auto;
+            flex-direction: row;
+        }
+    }
+
     @media screen and (min-width: 1440px) {
         .cards-wrapper {
             gap: 36px;
-        }
-        .card {
-            width: 650px;
         }
         .card__info {
             position: absolute;
             bottom: 0;
             background: #FFFFFF;
-            width: 100%;
+            width: calc(100% - 60px);
             margin: 30px;
         }
+        .card__menu {
+            padding-bottom: 51px;
+        }
         .card__info-title h2 {
-            margin-block: 46px 23px;
+            margin: 0;
+            padding-block: 46px 23px;
         }
         .card__info-subtitle h2 {
             margin-block: 0 18px;
