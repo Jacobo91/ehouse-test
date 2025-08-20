@@ -42,8 +42,7 @@
             "desktop_image": "shopify://shop_images/card_1_desktop.png",
             "title": "new arrivals",
             "subtitle": "Our latest Summer styles. Fresh. Fun. Fabulous",
-            "menu": "banner-menu",
-            "narrow": false
+            "menu": "banner-menu"
           }
         },
         "card_d3zpVK": {
@@ -53,8 +52,7 @@
             "desktop_image": "shopify://shop_images/card_2_desktop.png",
             "title": "college bound",
             "subtitle": "New places and new faces. Same great style.",
-            "menu": "shop-dorm-decor",
-            "narrow": true
+            "menu": "shop-dorm-decor"
           }
         }
       },
@@ -64,11 +62,29 @@
       ],
       "name": "two cards test",
       "settings": {}
+    },
+    "value_props_test_8Xmnbb": {
+      "type": "value-props-test",
+      "blocks": {
+        "block_type_fHqqET": {
+          "type": "block_type",
+          "settings": {
+            "image": "shopify://shop_images/shipping-icon.png",
+            "text": "FREE SHIPPING ON ALL ORDERS"
+          }
+        }
+      },
+      "block_order": [
+        "block_type_fHqqET"
+      ],
+      "name": "value props test",
+      "settings": {}
     }
   },
   "order": [
     "banner-test",
     "banner_test_m4pP3J",
-    "cards_test_Hy3FaX"
+    "cards_test_Hy3FaX",
+    "value_props_test_8Xmnbb"
   ]
 }
