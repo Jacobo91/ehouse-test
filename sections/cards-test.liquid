@@ -122,7 +122,7 @@
             >
           </picture>
         </div>
-        <div class="card__info">
+        <div class="card__info {% if block.settings.narrow %}false{% endif %}">
           <div class="card__info-title">
             <h2>{{ block.settings.title }}</h2>
           </div>
@@ -179,7 +179,13 @@
           "id": "menu",
           "label": "card links",
           "info": "use to set links in card"
-        }
+        },
+        {
+            "type": "checkbox",
+            "id": "narrow",
+            "label": "narrow info container",
+            "default": false,
+        },
       ]
     }
   ],
