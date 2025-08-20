@@ -67,21 +67,21 @@
       "type": "value-props-test",
       "blocks": {
         "block_type_fHqqET": {
-          "type": "block_type",
+          "type": "value-prop",
           "settings": {
             "image": "shopify://shop_images/shipping-icon.png",
             "text": "FREE SHIPPING ON ALL ORDERS"
           }
         },
         "block_type_aagKR8": {
-          "type": "block_type",
+          "type": "value-prop",
           "settings": {
             "image": "shopify://shop_images/returns-icon.png",
             "text": "FREE RETURNSON ALL ORDERS"
           }
         },
         "block_type_4ULjw6": {
-          "type": "block_type",
+          "type": "value-prop",
           "settings": {
             "image": "shopify://shop_images/checkout-icon.png",
             "text": "SAFE & SECURE CHECKOUT"
