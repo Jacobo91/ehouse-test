@@ -1,0 +1,49 @@
+<section class="page-width" id={{ section.id }}>
+    <div class="value-props-wrapper">
+        {% if section.settings.blocks.size == 3 %}
+            {% for block in section.blocks %}
+                <div class="value-prop value-prop{{ forloop.index }}">
+                    <div class="value-prop__image-wrapper">
+                        <img src="{{ block.settings.image | image_url: width: 200 }}" alt="value prop icon">
+                    </div>
+                    <div class="value-prop__text">
+                        <span>
+                            {{ block.settings.text }}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "value props test",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "block_type",
+        "name": "Block name",
+        "limit": 3,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "value prop icon"
+            },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "value prop text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "value props test"
+      }
+    ]
+  }
+{% endschema %}
